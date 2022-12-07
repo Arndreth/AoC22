@@ -4,9 +4,9 @@ public class Day04 : BaseDay
 {
     public override void PartOne()
     {
-        var input = ReadInput<string>();
+        var inputs = ReadInput<string>();
         int contained = 0, overlap = 0;
-        foreach (var input in input)
+        foreach (var input in inputs)
         {
             var assignments = Pairing(input);
 
