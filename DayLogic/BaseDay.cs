@@ -12,11 +12,11 @@ public abstract class BaseDay : IDay
     {
     }
 
-    protected string RawInput()
+    protected string RawInput(bool testInput=false)
     {
         var fullName = this.GetType().FullName;
         var day = fullName?.Substring(fullName.Length - 2, 2);
-        var path = $"Inputs/day_{day}.txt";
+        var path =(testInput ? "Test" : string.Empty) + $"Inputs/day_{day}.txt";
 
         if (File.Exists(path))
         {
